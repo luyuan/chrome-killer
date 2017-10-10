@@ -15,7 +15,7 @@ function isChrome(cmd) {
 }
 
 const processes = {
-	chrome: process.platform === 'darwin' ? 'Chrome Helper' : 'chrome',
+	chrome: process.platform === 'darwin' ? 'Google Chrome Helper' : 'chrome',
 	chromium: process.platform === 'darwin' ? 'Chromium Helper' : 'chromium'
 };
 
@@ -32,7 +32,7 @@ module.exports = opts => {
 
 	return psList().then(list => {
 		if (opts.includingMainProcess && process.platform === 'darwin') {
-			processes.chrome = 'Chrome';
+			processes.chrome = 'Google Chrome';
 			processes.chromium = 'Chromium';
 		}
 
