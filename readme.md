@@ -1,44 +1,42 @@
-# kill-tabs [![Build Status](https://travis-ci.org/sindresorhus/kill-tabs.svg?branch=master)](https://travis-ci.org/sindresorhus/kill-tabs)
+# kill-chrome (from kill-tabs)
 
 > Kill all Chrome tabs to improve performance, decrease battery usage, and save memory
 
-<img src="https://cloud.githubusercontent.com/assets/33569/19500764/18c8872e-9555-11e6-9599-dfab7ed90140.png" width="300" align="right">
-
 *Works on macOS, Linux, Windows.*
 
-I'm a [tab-abuser](https://cloud.githubusercontent.com/assets/170270/8513617/4290e966-2373-11e5-98d1-37560c2498e3.png) and I use this once in a while to prevent Chrome from taking up all system resources.
-
-When you run `kill-tabs` the Chrome tab processes are killed, which means they will no longer take up system resources, but they will still be in your Chrome window, just as crashed. When you want one back you just reload the tab.
+When you run `kill-chrome` the Chrome tab processes are killed, which means they will no longer take up system resources, but they will still be in your Chrome window, just as crashed. When you want one back you just reload the tab.
 
 
 ## CLI
 
 ```
-$ npm install --global kill-tabs
+$ npm install --global kill-chrome
 ```
 
 ```
-$ kill-tabs --help
+$ kill-chrome --help
 
   Usage
-    $ kill-tabs
+    $ kill-chrome
 
   Options
     --no-chromium  Don't kill tabs in Chromium
     --no-chrome    Don't kill tabs in Chrome
+    --including-main-process Kill main browser process
+    --instance-path          Specify path of Chrome/Chromium instance to kill
 ```
 
 
 ## API
 
 ```
-$ npm install --save kill-tabs
+$ npm install --save kill-chrome
 ```
 
 ```js
-const killTabs = require('kill-tabs');
+const killChrome = require('kill-chrome');
 
-killTabs().then(() => {
+killChrome().then(() => {
 	console.log('Killed tabs');
 });
 ```
