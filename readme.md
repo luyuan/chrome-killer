@@ -1,6 +1,6 @@
-# kill-chrome (from kill-tabs)
+# chrome-killer (from kill-tabs)
 
-> Kill all Chrome tabs to improve performance, decrease battery usage, and save memory
+> Kill all Chrome/Chromium tabs or entires to improve performance, decrease battery usage, and save memory
 
 *Works on macOS, Linux, Windows.*
 
@@ -10,18 +10,18 @@ When you run `kill-chrome` the Chrome tab processes are killed, which means they
 ## CLI
 
 ```
-$ npm install --global kill-chrome
+$ npm install --global chrome-killer
 ```
 
 ```
-$ kill-chrome --help
+$ chrome-killer --help
 
   Usage
-    $ kill-chrome
+    $ chrome-killer
 
   Options
-    --no-chromium  Don't kill tabs in Chromium
-    --no-chrome    Don't kill tabs in Chrome
+    --no-chromium            Don't kill tabs in Chromium
+    --no-chrome              Don't kill tabs in Chrome
     --including-main-process Kill main browser process
     --instance-path          Specify path of Chrome/Chromium instance to kill
 ```
@@ -30,13 +30,13 @@ $ kill-chrome --help
 ## API
 
 ```
-$ npm install --save kill-chrome
+$ npm install --save chrome-killer
 ```
 
 ```js
-const killChrome = require('kill-chrome');
+const chromeKiller = require('chrome-killer');
 
-killChrome().then(() => {
+chromeKiller().then(() => {
 	console.log('Killed tabs');
 });
 ```
@@ -50,3 +50,4 @@ You can use the [Reload All Tabs](https://chrome.google.com/webstore/detail/relo
 ## License
 
 MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT © [Lu Yuan](mailto:luyuan.china@gmail.com)
