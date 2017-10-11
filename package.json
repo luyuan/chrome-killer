@@ -1,14 +1,17 @@
 {
-  "name": "kill-chrome",
-  "version": "2.2.0",
-  "description": "Kill all Chrome tabs to improve performance, decrease battery usage, and save memory",
+  "name": "chrome-killer",
+  "version": "2.2.1",
+  "description": "Kill all Chrome/Chromium tabs or entires to improve performance, decrease battery usage, and save memory",
   "license": "MIT",
-  "repository": "luyuan/kill-chrome",
-  "author": {
+  "repository": "luyuan/chrome-killer",
+  "authors": [{
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
-  },
+  }, {
+    "name": "Lu Yuan",
+    "email": "luyuan.china@gmail.com"
+  }],
   "bin": "cli.js",
   "engines": {
     "node": ">=4"
