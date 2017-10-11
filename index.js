@@ -49,7 +49,7 @@ module.exports = opts => {
 				return Object.keys(processes).some(name => 
 					x.name === processes[name]) &&
 					(!opts.instancePath ||
-					(opts.instancePath && opts.instancePath === x.cmd)) &&
+					(opts.instancePath && x.cmd.startsWith(opts.instancePath))) &&
 					((opts.includingMainProcess && isMainProcess(x.cmd)) ||
 					(!opts.includingMainProcess &&
 					x.cmd.includes('--type=renderer') &&
